@@ -7,8 +7,11 @@ from sklearn.preprocessing import StandardScaler, LabelEncoder
 from tensorflow.keras.models import Model
 from tensorflow.keras.layers import Input, Dense, concatenate
 from tensorflow.keras.utils import to_categorical
-# ** UPDATED IMPORTS **
-from transformers import DistilBertTokenizer, TFDistilBertModel
+from transformers import AutoTokenizer, TFAutoModel
+
+# ** NEW, RELIABLE MODEL **
+MODEL_NAME = 'sentence-transformers/distiluse-base-multilingual-cased-v1'
+MAX_LEN = 32
 
 # --- 1. Load and Preprocess Data ---
 print("Loading and preprocessing data...")
@@ -27,11 +30,8 @@ df['label_encoded'] = label_encoder.fit_transform(df['label'])
 num_classes = len(label_encoder.classes_)
 y = to_categorical(df['label_encoded'], num_classes=num_classes)
 
-# --- Prepare Text Data with DistilBERT Tokenizer ---
-# ** UPDATED MODEL NAME **
-MODEL_NAME = 'distilbert-base-multilingual-cased'
-tokenizer = DistilBertTokenizer.from_pretrained(MODEL_NAME)
-MAX_LEN = 32
+# --- Prepare Text Data ---
+tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
 
 def bert_encode(texts, tokenizer, max_len=MAX_LEN):
     input_ids = []
@@ -65,15 +65,14 @@ X_train_ids, X_test_ids, X_train_masks, X_test_masks, X_train_num, X_test_num, y
 )
 
 # --- 2. Build the Hybrid Model ---
-print("Building the multilingual DistilBERT model...")
-# ** UPDATED BERT MODEL CLASS **
-distilbert_model = TFDistilBertModel.from_pretrained(MODEL_NAME)
-distilbert_model.trainable = False
+print(f"Building the model with {MODEL_NAME}...")
+base_model = TFAutoModel.from_pretrained(MODEL_NAME)
+base_model.trainable = False
 
 input_ids = Input(shape=(MAX_LEN,), dtype='int32', name='input_ids')
 attention_mask = Input(shape=(MAX_LEN,), dtype='int32', name='attention_mask')
-bert_output = distilbert_model(input_ids, attention_mask=attention_mask)[0]
-cls_token = bert_output[:, 0, :]
+bert_output = base_model(input_ids, attention_mask=attention_mask)[0]
+cls_token = bert_output[:, 0, :] 
 
 numerical_input = Input(shape=(X_train_num.shape[1],), name='numerical_input')
 dense_num = Dense(64, activation='relu')(numerical_input)
@@ -101,8 +100,8 @@ loss, accuracy = model.evaluate(
 print(f"\nFinal Model Accuracy on Test Set: {accuracy:.4f}")
 
 print("Saving model and supporting files...")
-model.save('distilbert_heading_model.h5') # New name for the smaller model
-with open('label_encoder.pkl', 'wb') as f: pickle.dump(label_encoder, f)
-with open('scaler.pkl', 'wb') as f: pickle.dump(scaler, f)
-with open('numerical_features.json', 'w') as f: json.dump(numerical_features, f)
+model.save('final_heading_model.h5')
+with open('final_label_encoder.pkl', 'wb') as f: pickle.dump(label_encoder, f)
+with open('final_scaler.pkl', 'wb') as f: pickle.dump(scaler, f)
+with open('final_numerical_features.json', 'w') as f: json.dump(numerical_features, f)
 print("All files saved successfully.")
