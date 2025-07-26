@@ -1,33 +1,24 @@
-# Use an official Python runtime as a parent image, specifying the AMD64 platform
-FROM --platform=linux/amd64 python:3.9-slim
-
-# Set environment variables to prevent Python from writing .pyc files and to run in unbuffered mode
-ENV PYTHONDONTWRITEBYTECODE 1
-ENV PYTHONUNBUFFERED 1
+# Use an official Python runtime as a parent image
+FROM python:3.11-slim
 
 # Set the working directory in the container
 WORKDIR /app
 
-# Install system dependencies required by some Python packages (e.g., PyMuPDF)
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    build-essential \
-    && rm -rf /var/lib/apt/lists/*
-
-# Copy the requirements file first to leverage Docker's layer caching
+# Copy the requirements file first to leverage Docker cache
 COPY requirements.txt .
 
-# Install Python dependencies
+# Install any needed packages specified in requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy your application script, model, and other necessary assets
-COPY run.py .
-COPY multilingual_heading_model_v2.h5 .
-COPY label_encoder_v2.pkl .
-COPY scaler_v2.pkl .
-COPY numerical_features_v2.json .
+# Copy the application code and the trained model files into the container
+COPY run1.py .
+COPY english_distilbert_model.h5 .
+COPY english_label_encoder.pkl .
+COPY english_scaler.pkl .
+COPY english_numerical_features.json .
 
-# Create the input and output directories as specified in the challenge document
-RUN mkdir -p /app/input /app/output
+# Expose port 5000 to the outside world
+EXPOSE 5000
 
-# Specify the command to run on container startup
-CMD ["python", "run.py"]
+# Set the default command to run the Flask API
+CMD ["python", "run1.py"]
