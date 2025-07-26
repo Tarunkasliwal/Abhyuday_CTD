@@ -1,0 +1,59 @@
+{
+    "metadata": {
+        "input_documents": [
+            "Learn Acrobat - Create and Convert_1.pdf",
+            "Learn Acrobat - Create and Convert_2.pdf",
+            "Learn Acrobat - Edit_1.pdf",
+            "Learn Acrobat - Edit_2.pdf",
+            "Learn Acrobat - Export_1.pdf",
+            "Learn Acrobat - Export_2.pdf",
+            "Learn Acrobat - Fill and Sign.pdf",
+            "Learn Acrobat - Generative AI_1.pdf",
+            "Learn Acrobat - Generative AI_2.pdf",
+            "Learn Acrobat - Request e-signatures_1.pdf",
+            "Learn Acrobat - Request e-signatures_2.pdf",
+            "Learn Acrobat - Share_1.pdf",
+            "Learn Acrobat - Share_2.pdf",
+            "Test Your Acrobat Exporting Skills.pdf",
+            "The Ultimate PDF Sharing Checklist.pdf"
+        ],
+        "persona": " HR professional",
+        "job_to_be_done": " Create and manage fillable forms",
+        "processing_timestamp": "2025-07-26T19:14:41.813743Z"
+    },
+    "extracted_sections": [
+        {
+            "document": "Learn Acrobat - Fill and Sign.pdf",
+            "section_title": "General Information",
+            "importance_rank": 1,
+            "page_number": 1
+        }
+    ],
+    "sub_section_analysis": [
+        {
+            "document": "Learn Acrobat - Fill and Sign.pdf",
+            "refined_text": "To remove all entries, select Remove All.\n• To remove some of the entries, select the entries and click Remove. (Shift-\nselect to select multiple adjacent entries; Ctrl-select to select multiple\nnonadjacent entries.)\n Change flat forms to fillable (Acrobat Pro)\nYou can change a flat form to a fillable form by either using the Prepare Form tool or\nenabling the Fill & Sign tools. Acrobat and Acrobat Reader users can use the Fill & Sign tool\nto fill in flat forms.\n Interactive form\nTo create an interactive form, use the Prepare Forms tool.",
+            "page_number": 1
+        },
+        {
+            "document": "Learn Acrobat - Fill and Sign.pdf",
+            "refined_text": "These non-interactive forms are called flat forms.\n Fill in interactive forms\nAn interactive form contains fields that you can select or fill in.\n 1. If necessary, select either the Hand Tool or the Select Tool from the context menu of\nthe page (right-click on the page to open the context menu).\n The pointer changes to a different icon as you move it over a field.",
+            "page_number": 1
+        },
+        {
+            "document": "Learn Acrobat - Fill and Sign.pdf",
+            "refined_text": "Interactive form\nTo create an interactive form, use the Prepare Forms tool. See Create a form from an existing\ndocument.\n Flat form\nTo enable the Fill & Sign tools, from the hamburger menu (File menu in macOS)\nchoose Save As Other > Acrobat Reader Extended PDF > Enable More Tools (includes\nForm Fill-in & Save).\n The tools are enabled for the current form only. When you create a different form, redo this\ntask to enable Acrobat Reader users to use the tools.",
+            "page_number": 1
+        },
+        {
+            "document": "Learn Acrobat - Fill and Sign.pdf",
+            "refined_text": "The Fill & Sign tool automatically detects the\nform fields like text fields, comb fields, checkboxes, and radio buttons. You can\nmanually add text and other symbols anywhere on the form using the Fill & Sign tool if\nrequired.\n You can complete the forms by entering information and adding your signatures. Acrobat\nalso allows you to send your completed forms to others and securely save them in Adobe\ncloud storage.\n Fill and sign PDF forms\nTo complete and sign PDF forms, open the form in Acrobat and then select E-Sign from the\nglobal bar.",
+            "page_number": 1
+        },
+        {
+            "document": "Learn Acrobat - Fill and Sign.pdf",
+            "refined_text": "Fill and Sign PDF Forms\nYou can easily fill, sign, and share your documents using Acrobat's Fill & Sign tool. Types\nof PDF forms\nTypes of PDF forms\n• Interactive forms: These contain fields that you can select and fill in.\n • Flat forms: These do not have interactive fields. It could be a paper form or PDF that\nhasn’t been optimized for form filling. The Fill & Sign tool automatically detects the\nform fields like text fields, comb fields, checkboxes, and radio buttons.",
+            "page_number": 1
+        }
+    ]
+}

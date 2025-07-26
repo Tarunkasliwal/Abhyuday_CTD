@@ -1,0 +1,129 @@
+{
+    "metadata": {
+        "input_documents": [
+            "South of France - Cities.pdf",
+            "South of France - Cuisine.pdf",
+            "South of France - History.pdf",
+            "South of France - Restaurants and Hotels.pdf",
+            "South of France - Things to Do.pdf",
+            "South of France - Tips and Tricks.pdf",
+            "South of France - Traditions and Culture.pdf"
+        ],
+        "persona": "Travel Planner",
+        "job_to_be_done": "Plan a 4-day trip for college",
+        "processing_timestamp": "2025-07-26T19:00:40.855149Z"
+    },
+    "extracted_sections": [
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "page_number": 1,
+            "section_title": "Planning, and Exploring",
+            "importance_rank": 1
+        },
+        {
+            "document": "South of France - Restaurants and Hotels.pdf",
+            "page_number": 13,
+            "section_title": "exceptional service make it a top choice for luxury travelers.",
+            "importance_rank": 2
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "page_number": 1,
+            "section_title": "Ultimate Guide to Activities and Things to Do in the South of France",
+            "importance_rank": 3
+        },
+        {
+            "document": "South of France - Restaurants and Hotels.pdf",
+            "page_number": 1,
+            "section_title": "Comprehensive Guide to Restaurants and Hotels in the South of France",
+            "importance_rank": 4
+        },
+        {
+            "document": "South of France - Cities.pdf",
+            "page_number": 1,
+            "section_title": "Comprehensive Guide to Major Cities in the South of France",
+            "importance_rank": 5
+        },
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "page_number": 8,
+            "section_title": "fees.",
+            "importance_rank": 6
+        },
+        {
+            "document": "South of France - History.pdf",
+            "page_number": 1,
+            "section_title": "A Historical Journey Through the South of France",
+            "importance_rank": 7
+        },
+        {
+            "document": "South of France - History.pdf",
+            "page_number": 11,
+            "section_title": "Perpignan, attracts photographers and journalists from around the world.",
+            "importance_rank": 8
+        },
+        {
+            "document": "South of France - Cuisine.pdf",
+            "page_number": 1,
+            "section_title": "A Culinary Journey Through the South of France",
+            "importance_rank": 9
+        },
+        {
+            "document": "South of France - Cuisine.pdf",
+            "page_number": 7,
+            "section_title": "to improve your baking skills and take home some delicious treats.",
+            "importance_rank": 10
+        },
+        {
+            "document": "South of France - Traditions and Culture.pdf",
+            "page_number": 1,
+            "section_title": "A Comprehensive Guide to Traditions and Culture in the South of France",
+            "importance_rank": 11
+        },
+        {
+            "document": "South of France - Cities.pdf",
+            "page_number": 13,
+            "section_title": "from the surrounding vineyards.",
+            "importance_rank": 12
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "page_number": 11,
+            "section_title": "notch DJs.",
+            "importance_rank": 13
+        },
+        {
+            "document": "South of France - Traditions and Culture.pdf",
+            "page_number": 5,
+            "section_title": "celebrates his legacy with performances by top jazz manouche musicians.",
+            "importance_rank": 14
+        }
+    ],
+    "sub_section_analysis": [
+        {
+            "document": "South of France - Tips and Tricks.pdf",
+            "page_number": 1,
+            "refined_text": "Introduction"
+        },
+        {
+            "document": "South of France - Restaurants and Hotels.pdf",
+            "page_number": 13,
+            "refined_text": "Conclusion"
+        },
+        {
+            "document": "South of France - Things to Do.pdf",
+            "page_number": 1,
+            "refined_text": "Introduction"
+        },
+        {
+            "document": "South of France - Restaurants and Hotels.pdf",
+            "page_number": 1,
+            "refined_text": "Introduction"
+        },
+        {
+            "document": "South of France - Cities.pdf",
+            "page_number": 1,
+            "refined_text": "Introduction"
+        }
+    ]
+}
