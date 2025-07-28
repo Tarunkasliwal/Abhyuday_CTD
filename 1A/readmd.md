@@ -225,9 +225,6 @@ python tests/benchmark.py
 - Asynchronous request handling
 - Redis caching for repeated documents
 
-## 🤝 Contributing
-
-We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
 
 ### Development Workflow
 1. Fork the repository
@@ -236,13 +233,10 @@ We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.
 4. Add tests for new functionality
 5. Submit a pull request
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 🏆 Hackathon Submission
 
-**Team**: [Your Team Name]  
+**Team**: Abhyuday  
 **Challenge**: Adobe "Connecting the Dots" Hackathon - Task 1A  
 **Submission Date**: [Date]  
 
@@ -252,13 +246,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Production-ready containerized deployment
 - Comprehensive feature engineering pipeline
 
-## 📞 Support
 
-For questions, issues, or feature requests:
-- 📧 Email: [your-email@domain.com]
-- 🐛 Issues: [GitHub Issues](link-to-issues)
-- 📖 Documentation: [Project Wiki](link-to-wiki)
 
----
-
-*Built with ❤️ for the Adobe Hackathon by [Team Name]*
+*Built with ❤️ for the Adobe Hackathon by Abhyuday
